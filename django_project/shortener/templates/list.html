@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}List of links{% endblock %}
+
+{% block content %}
+    {% if links %}
+        {% for link in links %}
+            <a href="{% url 'shortener:detail' link.id %}">{{link.short_link}}</a>
+            {{link.full_link}}</a>
+            <!-- {{link.created_at}}</a><br> -->
+            <br>
+        {% endfor %}
+    {% else %}
+        No links :(
+    {% endif %}
+{% endblock %}

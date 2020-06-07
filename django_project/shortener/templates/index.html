@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Shortener{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'shortener:create' %}" method="post">
+
+    {% csrf_token %}
+
+    <input type="text" required placeholder="Enter full links" name="full_link"><br>
+    <button type="submit">Create a short link</button>
+</form>
+
+{% endblock %}

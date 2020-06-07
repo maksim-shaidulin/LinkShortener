@@ -1,0 +1,11 @@
+django-admin startproject myproject
+cd myproject
+python manage.py startapp myapp
+python manage.py runserver
+
+DB
+python manage.py makemigrations shortener
+python manage.py migrate
+
+Admin
+python manage.py createsuperuser

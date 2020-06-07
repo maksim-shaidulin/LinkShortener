@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{link.short_link}}{% endblock %}
+
+{% block content %}
+<h2>{{link.short_link}}</h2>
+<p>{{link.full_link}}</p>
+<em>{{link.created_at}}</em>
+
+{% endblock %}
