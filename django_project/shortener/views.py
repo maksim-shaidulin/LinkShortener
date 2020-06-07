@@ -1,6 +1,5 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import render
-# from django.urls import reverse
 from .models import Link
 import random
 import string
